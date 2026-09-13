@@ -25,14 +25,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
-        Log.d("TAG", "onRestoreInstanceState")
         binding.titleTextView.text = savedInstanceState.getString(TITLE_TV_KEY, DEFAULT_STRING)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
 
-        Log.d("TAG", "onSavedInstanceState")
         outState.putString(TITLE_TV_KEY, binding.titleTextView.text.toString())
     }
 
